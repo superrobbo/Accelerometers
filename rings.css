@@ -1,0 +1,41 @@
+HTML CSS JSResult Skip Results Iframe
+EDIT ON
+*, *::before, *::after {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: clip;
+  perspective: 800px;
+
+  * {
+    transform-style: preserve-3d;
+  }
+}
+
+.rings {
+  position: relative;
+  transform:
+    rotateX(var(--rotateX, 0deg))
+    rotateY(var(--rotateY, 0deg));
+  transition: transform 0.4s ease-out;
+}
+
+.ring {
+  position: absolute;
+  inset: -100px;
+  border: hsl(calc(var(--i) * 60) 100% calc(60% - var(--i) * 8%)) solid 25px;
+  border-radius: 50% 0;
+  box-shadow: 0 0 25px #0007, 0 0 25px #0007 inset;
+  transform: translateZ(calc(var(--i) * -25px)) ;
+}
+
+
+Resources1× 0.5× 0.25×Rerun
